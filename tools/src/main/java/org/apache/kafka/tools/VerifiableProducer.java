@@ -198,7 +198,7 @@ public class VerifiableProducer implements AutoCloseable {
 
         return parser;
     }
-    
+
     /**
      * Read a properties file from the given path
      * @param filename The path of the file to read

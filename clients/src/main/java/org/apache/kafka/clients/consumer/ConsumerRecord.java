@@ -24,8 +24,8 @@ import org.apache.kafka.common.record.TimestampType;
 import java.util.Optional;
 
 /**
- * A key/value pair to be received from Kafka. This also consists of a topic name and 
- * a partition number from which the record is being received, an offset that points 
+ * A key/value pair to be received from Kafka. This also consists of a topic name and
+ * a partition number from which the record is being received, an offset that points
  * to the record in a Kafka partition, and a timestamp as marked by the corresponding ProducerRecord.
  */
 public class ConsumerRecord<K, V> {
@@ -235,7 +235,7 @@ public class ConsumerRecord<K, V> {
     public Headers headers() {
         return headers;
     }
-    
+
     /**
      * The key (or null if no key is specified)
      */

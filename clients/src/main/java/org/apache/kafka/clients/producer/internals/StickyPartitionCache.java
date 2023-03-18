@@ -27,7 +27,7 @@ import org.apache.kafka.common.utils.Utils;
 
 /**
  * An internal class that implements a cache used for sticky partitioning behavior. The cache tracks the current sticky
- * partition for any given topic. This class should not be used externally. 
+ * partition for any given topic. This class should not be used externally.
  */
 public class StickyPartitionCache {
     private final ConcurrentMap<String, Integer> indexCache;
@@ -47,7 +47,7 @@ public class StickyPartitionCache {
         List<PartitionInfo> partitions = cluster.partitionsForTopic(topic);
         Integer oldPart = indexCache.get(topic);
         Integer newPart = oldPart;
-        // Check that the current sticky partition for the topic is either not set or that the partition that 
+        // Check that the current sticky partition for the topic is either not set or that the partition that
         // triggered the new batch matches the sticky partition that needs to be changed.
         if (oldPart == null || oldPart == prevPartition) {
             List<PartitionInfo> availablePartitions = cluster.availablePartitionsForTopic(topic);

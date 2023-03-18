@@ -57,7 +57,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 public class ProduceBenchWorker implements TaskWorker {
     private static final Logger log = LoggerFactory.getLogger(ProduceBenchWorker.class);
-    
+
     private static final int THROTTLE_PERIOD_MS = 100;
 
     private final String id;

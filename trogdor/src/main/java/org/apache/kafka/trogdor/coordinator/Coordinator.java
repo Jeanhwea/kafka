@@ -46,7 +46,7 @@ import static net.sourceforge.argparse4j.impl.Arguments.store;
 /**
  * The Trogdor coordinator.
  *
- * The coordinator manages the agent processes in the cluster. 
+ * The coordinator manages the agent processes in the cluster.
  */
 public final class Coordinator {
     private static final Logger log = LoggerFactory.getLogger(Coordinator.class);

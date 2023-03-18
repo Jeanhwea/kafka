@@ -122,11 +122,11 @@ public class AdminClientTestUtils {
      * Used for benchmark. KafkaAdminClient.getListOffsetsCalls is only accessible
      * from within the admin package.
      */
-    public static List<KafkaAdminClient.Call> getListOffsetsCalls(KafkaAdminClient adminClient, 
+    public static List<KafkaAdminClient.Call> getListOffsetsCalls(KafkaAdminClient adminClient,
                                                                   MetadataOperationContext<ListOffsetsResult.ListOffsetsResultInfo, ListOffsetsOptions> context,
                                                                   Map<TopicPartition, OffsetSpec> topicPartitionOffsets,
                                                                   Map<TopicPartition, KafkaFutureImpl<ListOffsetsResult.ListOffsetsResultInfo>> futures) {
-        return adminClient.getListOffsetsCalls(context, topicPartitionOffsets, futures); 
+        return adminClient.getListOffsetsCalls(context, topicPartitionOffsets, futures);
     }
 
     /**

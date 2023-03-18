@@ -170,7 +170,7 @@ public class WorkerConfig extends AbstractConfig {
             + "plugins and their dependencies\n"
             + "Note: symlinks will be followed to discover dependencies or plugins.\n"
             + "Examples: plugin.path=/usr/local/share/java,/usr/local/share/kafka/plugins,"
-            + "/opt/connectors\n" 
+            + "/opt/connectors\n"
             + "Do not use config provider variables in this property, since the raw path is used "
             + "by the worker's scanner before config providers are initialized and used to "
             + "replace variables.";
@@ -378,8 +378,8 @@ public class WorkerConfig extends AbstractConfig {
         if (!Objects.equals(rawPluginPath, transformedPluginPath)) {
             log.warn(
                 "Variables cannot be used in the 'plugin.path' property, since the property is "
-                + "used by plugin scanning before the config providers that replace the " 
-                + "variables are initialized. The raw value '{}' was used for plugin scanning, as " 
+                + "used by plugin scanning before the config providers that replace the "
+                + "variables are initialized. The raw value '{}' was used for plugin scanning, as "
                 + "opposed to the transformed value '{}', and this may cause unexpected results.",
                 rawPluginPath,
                 transformedPluginPath

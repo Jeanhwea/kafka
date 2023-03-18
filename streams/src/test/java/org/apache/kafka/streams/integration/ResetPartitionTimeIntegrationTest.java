@@ -134,7 +134,7 @@ public class ResetPartitionTimeIntegrationTest {
 
         KafkaStreams kafkaStreams = getStartedStreams(streamsConfig, builder, true);
         try {
-            // start sending some records to have partition time committed 
+            // start sending some records to have partition time committed
             produceSynchronouslyToPartitionZero(
                 input,
                 Collections.singletonList(

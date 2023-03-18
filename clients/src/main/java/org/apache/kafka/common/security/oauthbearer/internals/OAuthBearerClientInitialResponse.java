@@ -76,7 +76,7 @@ public class OAuthBearerClientInitialResponse {
 
     /**
      * Constructor
-     * 
+     *
      * @param tokenValue
      *            the mandatory token value
      * @param extensions
@@ -92,7 +92,7 @@ public class OAuthBearerClientInitialResponse {
 
     /**
      * Constructor
-     * 
+     *
      * @param tokenValue
      *            the mandatory token value
      * @param authorizationId
@@ -113,7 +113,7 @@ public class OAuthBearerClientInitialResponse {
 
     /**
      * Return the always non-null extensions
-     * 
+     *
      * @return the always non-null extensions
      */
     public SaslExtensions extensions() {
@@ -134,7 +134,7 @@ public class OAuthBearerClientInitialResponse {
 
     /**
      * Return the always non-null token value
-     * 
+     *
      * @return the always non-null toklen value
      */
     public String tokenValue() {
@@ -143,7 +143,7 @@ public class OAuthBearerClientInitialResponse {
 
     /**
      * Return the always non-null authorization ID
-     * 
+     *
      * @return the always non-null authorization ID
      */
     public String authorizationId() {

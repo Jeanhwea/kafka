@@ -49,7 +49,7 @@ class Scheduler implements AutoCloseable {
         }
         executor.scheduleAtFixedRate(() -> executeThread(task, description), 0, interval.toMillis(), TimeUnit.MILLISECONDS);
     }
- 
+
     void scheduleRepeatingDelayed(Task task, Duration interval, String description) {
         if (interval.toMillis() < 0L) {
             return;
@@ -68,7 +68,7 @@ class Scheduler implements AutoCloseable {
         } catch (Throwable e) {
             LOG.error("{} caught exception in task: {}", name, description, e);
         }
-    } 
+    }
 
     public void close() {
         closed = true;

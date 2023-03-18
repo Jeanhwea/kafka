@@ -48,7 +48,7 @@ public class MirrorSourceTaskConfig extends MirrorSourceConfig {
         metricsReporters().forEach(metrics::addReporter);
         return metrics;
     }
- 
+
     protected static final ConfigDef TASK_CONFIG_DEF = new ConfigDef(CONNECTOR_CONFIG_DEF)
         .define(
             TASK_TOPIC_PARTITIONS,

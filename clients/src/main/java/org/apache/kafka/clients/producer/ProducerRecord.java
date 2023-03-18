@@ -57,7 +57,7 @@ public class ProducerRecord<K, V> {
 
     /**
      * Creates a record with a specified timestamp to be sent to a specified topic and partition
-     * 
+     *
      * @param topic The topic the record will be appended to
      * @param partition The partition to which the record should be sent
      * @param timestamp The timestamp of the record, in milliseconds since epoch. If null, the producer will assign
@@ -109,7 +109,7 @@ public class ProducerRecord<K, V> {
     public ProducerRecord(String topic, Integer partition, K key, V value, Iterable<Header> headers) {
         this(topic, partition, null, key, value, headers);
     }
-    
+
     /**
      * Creates a record to be sent to a specified topic and partition
      *
@@ -121,10 +121,10 @@ public class ProducerRecord<K, V> {
     public ProducerRecord(String topic, Integer partition, K key, V value) {
         this(topic, partition, null, key, value, null);
     }
-    
+
     /**
      * Create a record to be sent to Kafka
-     * 
+     *
      * @param topic The topic the record will be appended to
      * @param key The key that will be included in the record
      * @param value The record contents
@@ -132,10 +132,10 @@ public class ProducerRecord<K, V> {
     public ProducerRecord(String topic, K key, V value) {
         this(topic, null, null, key, value, null);
     }
-    
+
     /**
      * Create a record with no key
-     * 
+     *
      * @param topic The topic this record should be sent to
      * @param value The record contents
      */

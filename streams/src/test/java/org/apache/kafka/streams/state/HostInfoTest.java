@@ -25,7 +25,7 @@ import org.apache.kafka.common.config.ConfigException;
 import org.junit.Test;
 
 public class HostInfoTest {
-    
+
     @Test
     public void shouldCreateHostInfo() {
         final String endPoint = "host:9090";

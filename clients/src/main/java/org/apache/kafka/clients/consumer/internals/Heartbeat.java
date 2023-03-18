@@ -97,7 +97,7 @@ public final class Heartbeat {
         update(now);
         return heartbeatTimer.isExpired();
     }
-    
+
     long lastHeartbeatSend() {
         return this.lastHeartbeatSend;
     }

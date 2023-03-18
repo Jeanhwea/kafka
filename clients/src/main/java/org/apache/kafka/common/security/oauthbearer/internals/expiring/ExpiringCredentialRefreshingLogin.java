@@ -261,7 +261,7 @@ public abstract class ExpiringCredentialRefreshingLogin implements AutoCloseable
 
     /**
      * Determine when to sleep until before performing a refresh
-     * 
+     *
      * @param relativeToMs
      *            the point (in terms of number of milliseconds since the epoch) at
      *            which to perform the calculation

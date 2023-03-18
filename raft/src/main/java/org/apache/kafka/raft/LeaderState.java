@@ -100,7 +100,7 @@ public class LeaderState<T> implements EpochState {
             .setLeaderId(this.election().leaderId())
             .setVoters(voters)
             .setGrantingVoters(grantingVoters);
-        
+
         accumulator.appendLeaderChangeMessage(leaderChangeMessage, currentTimeMs);
         accumulator.forceDrain();
     }
@@ -450,7 +450,7 @@ public class LeaderState<T> implements EpochState {
                 endOffset,
                 lastFetchTimestamp,
                 lastCaughtUpTimestamp,
-                hasAcknowledgedLeader 
+                hasAcknowledgedLeader
             );
         }
     }

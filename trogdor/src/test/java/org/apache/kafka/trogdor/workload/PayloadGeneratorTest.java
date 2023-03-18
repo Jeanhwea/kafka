@@ -128,24 +128,24 @@ public class PayloadGeneratorTest {
         assertArrayEquals(val1End, val2End);
         assertArrayEquals(val1End, val3End);
     }
-    
+
     @Test
     public void testRandomComponentPayloadGenerator() {
         NullPayloadGenerator nullGenerator = new NullPayloadGenerator();
         RandomComponent nullConfig = new RandomComponent(50, nullGenerator);
-        
+
         UniformRandomPayloadGenerator uniformGenerator =
             new UniformRandomPayloadGenerator(5, 123, 0);
         RandomComponent uniformConfig = new RandomComponent(50, uniformGenerator);
-        
+
         SequentialPayloadGenerator sequentialGenerator =
             new SequentialPayloadGenerator(4, 10);
         RandomComponent sequentialConfig = new RandomComponent(75, sequentialGenerator);
-        
+
         ConstantPayloadGenerator constantGenerator =
             new ConstantPayloadGenerator(4, new byte[0]);
         RandomComponent constantConfig = new RandomComponent(25, constantGenerator);
-        
+
         List<RandomComponent> components1 = new ArrayList<>(Arrays.asList(nullConfig, uniformConfig));
         List<RandomComponent> components2 = new ArrayList<>(Arrays.asList(sequentialConfig, constantConfig));
         byte[] expected = new byte[4];
@@ -162,7 +162,7 @@ public class PayloadGeneratorTest {
                 notNull++;
             }
         }
-        
+
         iter = new PayloadIterator(
             new RandomComponentPayloadGenerator(123, components2));
         int isZeroBytes = 0;
@@ -175,20 +175,20 @@ public class PayloadGeneratorTest {
                 isNotZeroBytes++;
             }
         }
-        
+
         RandomComponent uniformConfig2 = new RandomComponent(25, uniformGenerator);
         RandomComponent sequentialConfig2 = new RandomComponent(25, sequentialGenerator);
         RandomComponent nullConfig2 = new RandomComponent(25, nullGenerator);
-        
+
         List<RandomComponent> components3 = new ArrayList<>(Arrays.asList(sequentialConfig2, uniformConfig2, nullConfig));
         List<RandomComponent> components4 = new ArrayList<>(Arrays.asList(uniformConfig2, sequentialConfig2, constantConfig, nullConfig2));
-        
+
         testReproducible(new RandomComponentPayloadGenerator(4, components1));
         testReproducible(new RandomComponentPayloadGenerator(123, components2));
         testReproducible(new RandomComponentPayloadGenerator(50, components3));
         testReproducible(new RandomComponentPayloadGenerator(0, components4));
-    } 
-    
+    }
+
     @Test
     public void testRandomComponentPayloadGeneratorErrors() {
         NullPayloadGenerator nullGenerator = new NullPayloadGenerator();
@@ -199,11 +199,11 @@ public class PayloadGeneratorTest {
         ConstantPayloadGenerator constantGenerator =
             new ConstantPayloadGenerator(4, new byte[0]);
         RandomComponent constantConfig = new RandomComponent(-25, constantGenerator);
-        
+
         List<RandomComponent> components1 = new ArrayList<>(Arrays.asList(nullConfig, uniformConfig));
         List<RandomComponent> components2 = new ArrayList<>(Arrays.asList(
              nullConfig, constantConfig, uniformConfig, nullConfig, uniformConfig, uniformConfig));
-     
+
         assertThrows(IllegalArgumentException.class, () ->
             new PayloadIterator(new RandomComponentPayloadGenerator(1, new ArrayList<>())));
         assertThrows(IllegalArgumentException.class, () ->

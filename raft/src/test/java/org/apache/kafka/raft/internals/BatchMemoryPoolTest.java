@@ -47,7 +47,7 @@ class BatchMemoryPoolTest {
         assertEquals(Long.MAX_VALUE, pool.availableMemory());
         assertFalse(pool.isOutOfMemory());
 
-        // Test that allocation works even after maximum batches are allocated 
+        // Test that allocation works even after maximum batches are allocated
         ByteBuffer buffer2 = pool.tryAllocate(batchSize);
         assertNotNull(buffer2);
         // The size of the pool can exceed maxRetainedBatches * batchSize
@@ -81,7 +81,7 @@ class BatchMemoryPoolTest {
         ByteBuffer batch3 = pool.tryAllocate(batchSize);
         assertNotNull(batch3);
 
-        // Test that allocation works even after maximum batches are allocated 
+        // Test that allocation works even after maximum batches are allocated
         ByteBuffer batch4 = pool.tryAllocate(batchSize);
         assertNotNull(batch4);
         // The size of the pool can exceed maxRetainedBatches * batchSize

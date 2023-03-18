@@ -1121,7 +1121,7 @@ public class SelectorTest {
      * Creates a connection, sends the specified number of requests and returns without reading
      * any incoming data. Some of the incoming data may be in the socket buffers when this method
      * returns, but there is no guarantee that all the data from the server will be available
-     * immediately. 
+     * immediately.
      */
     private KafkaChannel createConnectionWithPendingReceives(int pendingReceives) throws Exception {
         String id = "0";

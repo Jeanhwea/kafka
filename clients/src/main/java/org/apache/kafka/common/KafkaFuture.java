@@ -63,7 +63,7 @@ public abstract class KafkaFuture<T> implements Future<T> {
         void accept(A a, B b);
     }
 
-    /** 
+    /**
      * Returns a new KafkaFuture that is already completed with the given value.
      */
     public static <U> KafkaFuture<U> completedFuture(U value) {
@@ -72,7 +72,7 @@ public abstract class KafkaFuture<T> implements Future<T> {
         return future;
     }
 
-    /** 
+    /**
      * Returns a new KafkaFuture that is completed when all the given futures have completed.  If
      * any future throws an exception, the returned future returns it.  If multiple futures throw
      * an exception, which one gets returned is arbitrarily chosen.

@@ -43,10 +43,10 @@ import java.util.stream.Collectors;
 import java.util.concurrent.ExecutionException;
 
 /** Interprets MM2's internal topics (checkpoints, heartbeats) on a given cluster.
- *  <p> 
+ *  <p>
  *  Given a top-level "mm2.properties" configuration file, MirrorClients can be constructed
  *  for individual clusters as follows:
- *  </p> 
+ *  </p>
  *  <pre>
  *    MirrorMakerConfig mmConfig = new MirrorMakerConfig(props);
  *    MirrorClientConfig mmClientConfig = mmConfig.clientConfig("some-cluster");

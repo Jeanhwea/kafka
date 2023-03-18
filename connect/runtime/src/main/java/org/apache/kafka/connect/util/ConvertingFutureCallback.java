@@ -50,7 +50,7 @@ public abstract class ConvertingFutureCallback<U, T> implements Callback<U>, Fut
             if (isDone()) {
                 return;
             }
-            
+
             if (error != null) {
                 this.exception = error;
             } else {

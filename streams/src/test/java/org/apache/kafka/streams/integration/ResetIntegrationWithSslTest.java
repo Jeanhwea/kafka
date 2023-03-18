@@ -83,7 +83,7 @@ public class ResetIntegrationWithSslTest extends AbstractResetIntegrationTest {
         prepareTest();
     }
 
-    @After 
+    @After
     public void after() throws Exception {
         cleanupTest();
     }

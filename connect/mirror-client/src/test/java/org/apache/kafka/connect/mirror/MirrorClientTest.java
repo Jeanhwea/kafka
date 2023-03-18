@@ -47,7 +47,7 @@ public class MirrorClientTest {
 
         FakeMirrorClient() {
             this(Collections.emptyList());
-        } 
+        }
 
         @Override
         protected Set<String> listTopics() {
@@ -115,7 +115,7 @@ public class MirrorClientTest {
         MirrorClient client = new FakeMirrorClient(Arrays.asList("topic1", "topic2", "heartbeats",
             "source1.heartbeats", "source1.source2.heartbeats", "source3.heartbeats"));
         assertEquals(1, client.replicationHops("source1"));
-        assertEquals(2, client.replicationHops("source2")); 
+        assertEquals(2, client.replicationHops("source2"));
         assertEquals(1, client.replicationHops("source3"));
         assertEquals(-1, client.replicationHops("source4"));
     }

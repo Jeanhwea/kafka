@@ -27,7 +27,7 @@ import java.util.regex.Pattern;
 
 /** Filters excluded property names or regexes. */
 public class DefaultConfigPropertyFilter implements ConfigPropertyFilter {
-    
+
     public static final String CONFIG_PROPERTIES_EXCLUDE_CONFIG = "config.properties.exclude";
     public static final String CONFIG_PROPERTIES_EXCLUDE_ALIAS_CONFIG = "config.properties.blacklist";
 

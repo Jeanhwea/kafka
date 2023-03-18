@@ -167,7 +167,7 @@ public class MirrorCheckpointConnector extends SourceConnector {
                 config.checkpointsTopicReplicationFactor(),
                 targetAdminClient
         );
-    } 
+    }
 
     boolean shouldReplicate(String group) {
         return groupFilter.shouldReplicateGroup(group);

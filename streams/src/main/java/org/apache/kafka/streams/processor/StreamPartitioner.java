@@ -44,7 +44,7 @@ import java.util.Set;
  * for that topic.
  * <p>
  * All StreamPartitioner implementations should be stateless and a pure function so they can be shared across topic and sink nodes.
- * 
+ *
  * @param <K> the type of keys
  * @param <V> the type of values
  * @see Topology#addSink(String, String, org.apache.kafka.common.serialization.Serializer,
@@ -66,7 +66,7 @@ public interface StreamPartitioner<K, V> {
     Integer partition(String topic, K key, V value, int numPartitions);
 
     /**
-     * Determine the number(s) of the partition(s) to which a record with the given key and value should be sent, 
+     * Determine the number(s) of the partition(s) to which a record with the given key and value should be sent,
      * for the given topic and current partition count
      * @param topic the topic name this record is sent to
      * @param key the key of the record

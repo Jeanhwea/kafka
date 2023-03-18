@@ -435,7 +435,7 @@ public class NamedTopologyIntegrationTest {
             CLUSTER.deleteTopics(SINGLE_PARTITION_INPUT_STREAM, SINGLE_PARTITION_OUTPUT_STREAM);
         }
     }
-    
+
     @Test
     public void shouldAddNamedTopologyToRunningApplicationWithEmptyInitialTopology() throws Exception {
         topology1Builder.stream(INPUT_STREAM_1).groupBy((k, v) -> k).count(IN_MEMORY_STORE).toStream().to(OUTPUT_STREAM_1);
@@ -604,7 +604,7 @@ public class NamedTopologyIntegrationTest {
             CLUSTER.deleteTopics(DELAYED_INPUT_STREAM_1);
         }
     }
-    
+
     @Test
     public void shouldAllowPatternSubscriptionWithMultipleNamedTopologies() throws Exception {
         topology1Builder.stream(Pattern.compile(INPUT_STREAM_1)).groupBy((k, v) -> k).count().toStream().to(OUTPUT_STREAM_1);
@@ -726,7 +726,7 @@ public class NamedTopologyIntegrationTest {
 
             streams.addNamedTopology(topology1Builder.build());
             streams2.addNamedTopology(topology1Builder2.build());
-            
+
             IntegrationTestUtils.startApplicationAndWaitUntilRunning(asList(streams, streams2));
             assertThat(waitUntilMinKeyValueRecordsReceived(consumerConfig, OUTPUT_STREAM_1, 3), equalTo(COUNT_OUTPUT_DATA));
 

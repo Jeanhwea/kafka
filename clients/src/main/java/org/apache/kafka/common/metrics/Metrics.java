@@ -52,7 +52,7 @@ import static java.util.Collections.emptyList;
  * that are recorded by the sensor.
  * <p>
  * Usage looks something like this:
- * 
+ *
  * <pre>
  * // set up metrics:
  * Metrics metrics = new Metrics(); // this is the global repository of metrics and sensors
@@ -61,7 +61,7 @@ import static java.util.Collections.emptyList;
  * sensor.add(metricName, new Avg());
  * metricName = new MetricName(&quot;message-size-max&quot;, &quot;producer-metrics&quot;);
  * sensor.add(metricName, new Max());
- * 
+ *
  * // as messages are sent we record the sizes
  * sensor.record(messageSize);
  * </pre>
@@ -255,14 +255,14 @@ public class Metrics implements Closeable {
      */
     public static String toHtmlTable(String domain, Iterable<MetricNameTemplate> allMetrics) {
         Map<String, Map<String, String>> beansAndAttributes = new TreeMap<>();
-    
+
         try (Metrics metrics = new Metrics()) {
             for (MetricNameTemplate template : allMetrics) {
                 Map<String, String> tags = new LinkedHashMap<>();
                 for (String s : template.tags()) {
                     tags.put(s, "{" + s + "}");
                 }
-    
+
                 MetricName metricName = metrics.metricName(template.name(), template.group(), template.description(), tags);
                 String mBeanName = JmxReporter.getMBeanName(domain, metricName);
                 if (!beansAndAttributes.containsKey(mBeanName)) {
@@ -276,23 +276,23 @@ public class Metrics implements Closeable {
                 }
             }
         }
-        
+
         StringBuilder b = new StringBuilder();
         b.append("<table class=\"data-table\"><tbody>\n");
-    
+
         for (Entry<String, Map<String, String>> e : beansAndAttributes.entrySet()) {
             b.append("<tr>\n");
             b.append("<td colspan=3 class=\"mbeanName\" style=\"background-color:#ccc; font-weight: bold;\">");
             b.append(e.getKey());
             b.append("</td>");
             b.append("</tr>\n");
-            
+
             b.append("<tr>\n");
             b.append("<th style=\"width: 90px\"></th>\n");
             b.append("<th>Attribute name</th>\n");
             b.append("<th>Description</th>\n");
             b.append("</tr>\n");
-            
+
             for (Entry<String, String> e2 : e.getValue().entrySet()) {
                 b.append("<tr>\n");
                 b.append("<td></td>");
@@ -304,12 +304,12 @@ public class Metrics implements Closeable {
                 b.append("</td>");
                 b.append("</tr>\n");
             }
-    
+
         }
         b.append("</tbody></table>");
-    
+
         return b.toString();
-    
+
     }
 
     public MetricConfig config() {
@@ -665,14 +665,14 @@ public class Metrics implements Closeable {
         // check to make sure that the runtime defined tags contain all the template tags.
         Set<String> runtimeTagKeys = new HashSet<>(tags.keySet());
         runtimeTagKeys.addAll(config().tags().keySet());
-        
+
         Set<String> templateTagKeys = template.tags();
-        
+
         if (!runtimeTagKeys.equals(templateTagKeys)) {
             throw new IllegalArgumentException("For '" + template.name() + "', runtime-defined metric tags do not match the tags in the template. "
                     + "Runtime = " + runtimeTagKeys.toString() + " Template = " + templateTagKeys.toString());
         }
-                
+
         return this.metricName(template.name(), template.group(), template.description(), tags);
     }
 

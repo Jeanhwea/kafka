@@ -248,7 +248,7 @@ public class ExpiringCredentialRefreshingLoginTest {
                     testLoginContext.login();
                     loginSuccess = true;
                 }
-        
+
                 @Override
                 public void logout() throws LoginException {
                     if (!loginSuccess)
@@ -256,7 +256,7 @@ public class ExpiringCredentialRefreshingLoginTest {
                         throw new IllegalStateException("logout called without a successful login");
                     testLoginContext.logout();
                 }
-        
+
                 @Override
                 public Subject getSubject() {
                     return testLoginContext.getSubject();

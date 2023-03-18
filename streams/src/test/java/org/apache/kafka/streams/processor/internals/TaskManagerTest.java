@@ -1739,7 +1739,7 @@ public class TaskManagerTest {
 
         assertThat(taskManager.getTaskOffsetSums(), is(expectedOffsetSums));
     }
-    
+
     @Test
     public void shouldNotReportOffsetSumsForTaskWeCantLock() throws Exception {
         expectLockFailedFor(taskId00);
@@ -4474,7 +4474,7 @@ public class TaskManagerTest {
         task01.setCommittableOffsetsAndMetadata(offsetsT01);
         final StateMachineTask task02 = new StateMachineTask(taskId02, taskId02Partitions, true);
         when(tasks.allTasks()).thenReturn(mkSet(task00, task01, task02));
-        
+
         expect(consumer.groupMetadata()).andStubReturn(null);
         replay(activeTaskCreator, consumer);
 

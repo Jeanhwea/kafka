@@ -106,7 +106,7 @@ public class RestClientTest {
 
         @Parameterized.Parameter
         public Throwable requestException;
-        
+
         @Parameterized.Parameters
         public static Collection<Object[]> requestExceptions() {
             return Arrays.asList(new Object[][]{

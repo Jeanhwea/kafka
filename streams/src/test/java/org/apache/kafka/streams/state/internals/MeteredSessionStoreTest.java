@@ -107,7 +107,7 @@ public class MeteredSessionStoreTest {
     private InternalProcessorContext context;
 
     private Map<String, String> tags;
-    
+
     @Before
     public void before() {
         final Time mockTime = new MockTime();

@@ -650,8 +650,8 @@ public class DistributedHerder extends AbstractHerder implements Runnable {
                 taskConfigUpdates = new HashSet<>();
             }
         } else {
-            log.trace("Skipping config updates with incremental cooperative rebalancing " 
-                + "since no config rebalance is required " 
+            log.trace("Skipping config updates with incremental cooperative rebalancing "
+                + "since no config rebalance is required "
                 + "and there are no connector config, task config, or target state changes pending");
         }
         return retValue;
@@ -2252,7 +2252,7 @@ public class DistributedHerder extends AbstractHerder implements Runnable {
         ClusterConfigState snapshot = configBackingStore.snapshot();
         for (String connector : statusBackingStore.connectors()) {
             Set<ConnectorTaskId> remainingTasks = new HashSet<>(snapshot.tasks(connector));
-            
+
             statusBackingStore.getAll(connector).stream()
                 .map(TaskStatus::id)
                 .filter(task -> !remainingTasks.contains(task))

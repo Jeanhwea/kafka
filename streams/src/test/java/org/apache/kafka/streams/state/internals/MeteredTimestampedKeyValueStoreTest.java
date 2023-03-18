@@ -50,7 +50,7 @@ import org.easymock.MockType;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
- 
+
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;

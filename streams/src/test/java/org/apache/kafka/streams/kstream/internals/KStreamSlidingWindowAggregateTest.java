@@ -334,7 +334,7 @@ public class KStreamSlidingWindowAggregateTest {
             inputTopic1.pipeInput("C", "3", 16L);
             inputTopic1.pipeInput("C", "4", 21);
             inputTopic1.pipeInput("C", "5", 23L);
-            
+
             inputTopic1.pipeInput("D", "4", 11L); // skip for emit final [1, 11], close time 15
             inputTopic1.pipeInput("D", "2", 12L); // skip for emit final [2, 12], close time 15
             inputTopic1.pipeInput("D", "3", 29L);

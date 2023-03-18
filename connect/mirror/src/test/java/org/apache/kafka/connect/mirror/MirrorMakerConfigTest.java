@@ -222,7 +222,7 @@ public class MirrorMakerConfigTest {
         SourceAndTarget sourceAndTarget = new SourceAndTarget("source", "target");
         Map<String, String> connectorProps = mirrorConfig.connectorBaseConfig(sourceAndTarget,
             MirrorSourceConnector.class);
-        DefaultTopicFilter.TopicFilterConfig filterConfig = 
+        DefaultTopicFilter.TopicFilterConfig filterConfig =
             new DefaultTopicFilter.TopicFilterConfig(connectorProps);
         assertEquals(Arrays.asList("topic1", "topic2"), filterConfig.getList("topics"),
             "source->target.topics should be passed through to TopicFilters.");

@@ -668,7 +668,7 @@ public class SaslClientAuthenticator implements Authenticator {
          * re-authentication; the request was made when the channel was successfully
          * authenticated, and the response arrived during the re-authentication
          * process.
-         * 
+         *
          * @return the (always non-null but possibly empty) NetworkReceive response
          *         that arrived during re-authentication that is unrelated to
          *         re-authentication, if any

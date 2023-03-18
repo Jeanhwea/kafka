@@ -94,12 +94,12 @@ class MirrorCheckpointMetrics implements AutoCloseable {
 
         GroupMetrics(TopicPartition topicPartition, String group) {
             Map<String, String> tags = new LinkedHashMap<>();
-            tags.put("source", source); 
-            tags.put("target", target); 
+            tags.put("source", source);
+            tags.put("target", target);
             tags.put("group", group);
             tags.put("topic", topicPartition.topic());
             tags.put("partition", Integer.toString(topicPartition.partition()));
- 
+
             checkpointLatencySensor = metrics.sensor("checkpoint-latency");
             checkpointLatencySensor.add(metrics.metricInstance(CHECKPOINT_LATENCY, tags), new Value());
             checkpointLatencySensor.add(metrics.metricInstance(CHECKPOINT_LATENCY_MAX, tags), new Max());

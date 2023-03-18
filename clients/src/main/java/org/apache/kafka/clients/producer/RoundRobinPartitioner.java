@@ -28,10 +28,10 @@ import org.apache.kafka.common.utils.Utils;
 
 /**
  * The "Round-Robin" partitioner
- * 
- * This partitioning strategy can be used when user wants 
+ *
+ * This partitioning strategy can be used when user wants
  * to distribute the writes to all partitions equally. This
- * is the behaviour regardless of record key hash. 
+ * is the behaviour regardless of record key hash.
  *
  */
 public class RoundRobinPartitioner implements Partitioner {

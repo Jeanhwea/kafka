@@ -755,7 +755,7 @@ public class RecordCollectorTest {
             taskId,
             streamsProducer,
             productionExceptionHandler,
-            streamsMetrics, 
+            streamsMetrics,
             topology
         );
 
@@ -773,7 +773,7 @@ public class RecordCollectorTest {
         final ProcessorTopology topology = mock(ProcessorTopology.class);
         expect(topology.sinkTopics()).andStubReturn(Collections.emptySet());
         replay(streamsProducer, topology);
-        
+
         final RecordCollector collector = new RecordCollectorImpl(
             logContext,
             taskId,
@@ -792,11 +792,11 @@ public class RecordCollectorTest {
     public void shouldNotAbortTxOnCloseCleanIfEosEnabled() {
         final StreamsProducer streamsProducer = mock(StreamsProducer.class);
         expect(streamsProducer.eosEnabled()).andReturn(true);
-        
+
         final ProcessorTopology topology = mock(ProcessorTopology.class);
         expect(topology.sinkTopics()).andStubReturn(Collections.emptySet());
         replay(streamsProducer, topology);
-        
+
         final RecordCollector collector = new RecordCollectorImpl(
             logContext,
             taskId,
@@ -805,7 +805,7 @@ public class RecordCollectorTest {
             streamsMetrics,
             topology
         );
-       
+
         collector.closeClean();
 
         verify(streamsProducer);
@@ -816,11 +816,11 @@ public class RecordCollectorTest {
         final StreamsProducer streamsProducer = mock(StreamsProducer.class);
         expect(streamsProducer.eosEnabled()).andReturn(true);
         streamsProducer.abortTransaction();
-        
+
         final ProcessorTopology topology = mock(ProcessorTopology.class);
         expect(topology.sinkTopics()).andStubReturn(Collections.emptySet());
         replay(streamsProducer, topology);
-        
+
         final RecordCollector collector = new RecordCollectorImpl(
             logContext,
             taskId,

@@ -96,7 +96,7 @@ public class EmbeddedKafkaCluster {
 
     private static final Logger log = LoggerFactory.getLogger(EmbeddedKafkaCluster.class);
 
-    private static final long DEFAULT_PRODUCE_SEND_DURATION_MS = TimeUnit.SECONDS.toMillis(120); 
+    private static final long DEFAULT_PRODUCE_SEND_DURATION_MS = TimeUnit.SECONDS.toMillis(120);
 
     // Kafka Config
     private final KafkaServer[] brokers;
@@ -300,7 +300,7 @@ public class EmbeddedKafkaCluster {
             return false;
         }
     }
-    
+
     public boolean sslEnabled() {
         final String listeners = brokerConfig.getProperty(KafkaConfig.ListenersProp());
         return listeners != null && listeners.contains("SSL");

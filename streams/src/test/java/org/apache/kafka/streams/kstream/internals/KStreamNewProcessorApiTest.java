@@ -93,7 +93,7 @@ public class KStreamNewProcessorApiTest {
             Assertions.assertEquals(stateStore.get("c"), "bazUpdated");
         }
     }
-    
+
     private static class TransformerSupplier implements FixedKeyProcessorSupplier<String, String, String> {
         private final StoreBuilder<?> storeBuilder;
         public TransformerSupplier(final StoreBuilder<?> storeBuilder) {

@@ -363,7 +363,7 @@ public class BlockingConnectorTest {
                     ConfigDef.Type.STRING,
                     "",
                     ConfigDef.Importance.MEDIUM,
-                    "Where to block indefinitely, e.g., 'Connector::start', 'Connector::initialize', " 
+                    "Where to block indefinitely, e.g., 'Connector::start', 'Connector::initialize', "
                         + "'Connector::taskConfigs', 'Task::version', 'SinkTask::put', 'SourceTask::poll'"
                 );
         }

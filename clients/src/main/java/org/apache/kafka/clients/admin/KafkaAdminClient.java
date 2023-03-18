@@ -1818,7 +1818,7 @@ public class KafkaAdminClient extends AdminClient {
             }
         };
     }
-   
+
     private Call getDeleteTopicsWithIdsCall(final DeleteTopicsOptions options,
                                             final Map<Uuid, KafkaFutureImpl<Void>> futures,
                                             final List<Uuid> topicIds,

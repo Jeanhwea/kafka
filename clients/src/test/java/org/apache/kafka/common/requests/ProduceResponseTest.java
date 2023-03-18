@@ -56,7 +56,7 @@ public class ProduceResponseTest {
 
         assertEquals(1, v5FromBytes.data().responses().size());
         ProduceResponseData.TopicProduceResponse topicProduceResponse = v5FromBytes.data().responses().iterator().next();
-        assertEquals(1, topicProduceResponse.partitionResponses().size());  
+        assertEquals(1, topicProduceResponse.partitionResponses().size());
         ProduceResponseData.PartitionProduceResponse partitionProduceResponse = topicProduceResponse.partitionResponses().iterator().next();
         TopicPartition tp = new TopicPartition(topicProduceResponse.name(), partitionProduceResponse.index());
         assertEquals(tp0, tp);
@@ -85,7 +85,7 @@ public class ProduceResponseTest {
         for (ProduceResponse produceResponse : arrResponse) {
             assertEquals(1, produceResponse.data().responses().size());
             ProduceResponseData.TopicProduceResponse topicProduceResponse = produceResponse.data().responses().iterator().next();
-            assertEquals(1, topicProduceResponse.partitionResponses().size());  
+            assertEquals(1, topicProduceResponse.partitionResponses().size());
             ProduceResponseData.PartitionProduceResponse partitionProduceResponse = topicProduceResponse.partitionResponses().iterator().next();
             assertEquals(100, partitionProduceResponse.logStartOffset());
             assertEquals(10000, partitionProduceResponse.baseOffset());

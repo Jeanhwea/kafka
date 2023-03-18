@@ -66,7 +66,7 @@ public class UniformStickyPartitionerTest {
                 countForPart2++;
         }
         // Simulates switching the sticky partition on a new batch.
-        partitioner.onNewBatch("test", cluster, part);       
+        partitioner.onNewBatch("test", cluster, part);
         for (int i = 1; i <= 50; i++) {
             part = partitioner.partition("test", null, null, null, null, cluster);
             assertTrue(part == 0 || part == 2, "We should never choose a leader-less node in round robin");
@@ -106,10 +106,10 @@ public class UniformStickyPartitionerTest {
         // Simulate a batch filling up and switching the sticky partition.
         partitioner.onNewBatch(TOPIC_A, testCluster, partition);
         partitioner.onNewBatch(TOPIC_B, testCluster, 0);
-        
+
         // Save old partition to ensure that the wrong partition does not trigger a new batch.
-        int oldPart = partition; 
-        
+        int oldPart = partition;
+
         for (int i = 0; i < 30; ++i) {
             partition = partitioner.partition(TOPIC_A, null, keyBytes, null, null, testCluster);
             Integer count = partitionCount.get(partition);
@@ -121,12 +121,12 @@ public class UniformStickyPartitionerTest {
                 partitioner.partition(TOPIC_B, null, keyBytes, null, null, testCluster);
             }
         }
-        
+
         int newPart = partition;
-        
+
         // Attempt to switch the partition with the wrong previous partition. Sticky partition should not change.
         partitioner.onNewBatch(TOPIC_A, testCluster, oldPart);
-        
+
         for (int i = 0; i < 30; ++i) {
             partition = partitioner.partition(TOPIC_A, null, keyBytes, null, null, testCluster);
             Integer count = partitionCount.get(partition);
@@ -137,8 +137,8 @@ public class UniformStickyPartitionerTest {
             if (i % 5 == 0) {
                 partitioner.partition(TOPIC_B, null, keyBytes, null, null, testCluster);
             }
-        } 
-               
+        }
+
         assertEquals(30, partitionCount.get(oldPart).intValue());
         assertEquals(60, partitionCount.get(newPart).intValue());
     }

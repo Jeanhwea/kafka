@@ -97,7 +97,7 @@ public class MirrorMaker {
         MirrorSourceConnector.class,
         MirrorHeartbeatConnector.class,
         MirrorCheckpointConnector.class);
- 
+
     private final Map<SourceAndTarget, Herder> herders = new HashMap<>();
     private CountDownLatch startLatch;
     private CountDownLatch stopLatch;
@@ -301,7 +301,7 @@ public class MirrorMaker {
             Properties props = Utils.loadProps(configFile.getPath());
             Map<String, String> config = Utils.propsToStringMap(props);
             MirrorMaker mirrorMaker = new MirrorMaker(config, clusters, Time.SYSTEM);
-            
+
             try {
                 mirrorMaker.start();
             } catch (Exception e) {

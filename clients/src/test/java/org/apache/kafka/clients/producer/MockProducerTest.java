@@ -702,7 +702,7 @@ public class MockProducerTest {
         producer.close();
         assertThrows(IllegalStateException.class, producer::flush);
     }
-    
+
     @Test
     @SuppressWarnings("unchecked")
     public void shouldThrowClassCastException() {

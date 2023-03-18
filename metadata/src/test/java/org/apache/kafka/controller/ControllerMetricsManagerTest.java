@@ -160,7 +160,7 @@ final class ControllerMetricsManagerTest {
     public void testTopicCountDecreased() {
         ControllerMetrics metrics = new MockControllerMetrics();
         ControllerMetricsManager manager = new ControllerMetricsManager(metrics);
-        
+
         Uuid id = Uuid.randomUuid();
         manager.replay(topicRecord("test", id));
         manager.replay(removeTopicRecord(id));

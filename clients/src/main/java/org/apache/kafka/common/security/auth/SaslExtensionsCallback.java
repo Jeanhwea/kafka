@@ -41,7 +41,7 @@ public class SaslExtensionsCallback implements Callback {
 
     /**
      * Sets the SASL extensions on this callback.
-     * 
+     *
      * @param extensions
      *            the mandatory extensions to set
      */

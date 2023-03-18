@@ -26,7 +26,7 @@ public class OAuthBearerValidationUtils {
     /**
      * Validate the given claim for existence and type. It can be required to exist
      * in the given claims, and if it exists it must be one of the types indicated
-     * 
+     *
      * @param jwt
      *            the mandatory JWT to which the validation will be applied
      * @param required
@@ -60,7 +60,7 @@ public class OAuthBearerValidationUtils {
      * of seconds since the epoch defining when the JWT was issued; it is a
      * validation error if the Issued At time is after the time at which the check
      * is being done (plus any allowable clock skew).
-     * 
+     *
      * @param jwt
      *            the mandatory JWT to which the validation will be applied
      * @param required
@@ -98,7 +98,7 @@ public class OAuthBearerValidationUtils {
      * JWT expires. It is a validation error if the time at which the check is being
      * done (minus any allowable clock skew) is on or after the Expiration Time
      * time.
-     * 
+     *
      * @param jwt
      *            the mandatory JWT to which the validation will be applied
      * @param whenCheckTimeMs
@@ -131,11 +131,11 @@ public class OAuthBearerValidationUtils {
     /**
      * Validate the 'iat' (Issued At) and 'exp' (Expiration Time) claims for
      * internal consistency. The following must be true if both claims exist:
-     * 
+     *
      * <pre>
      * exp > iat
      * </pre>
-     * 
+     *
      * @param jwt
      *            the mandatory JWT to which the validation will be applied
      * @return the result of the validation
@@ -160,7 +160,7 @@ public class OAuthBearerValidationUtils {
      * Validate the given token's scope against the required scope. Every required
      * scope element (if any) must exist in the provided token's scope for the
      * validation to succeed.
-     * 
+     *
      * @param token
      *            the required token for which the scope will to validate
      * @param requiredScope

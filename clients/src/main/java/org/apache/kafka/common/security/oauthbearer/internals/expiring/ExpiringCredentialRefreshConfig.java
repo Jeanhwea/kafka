@@ -35,7 +35,7 @@ public class ExpiringCredentialRefreshConfig {
     /**
      * Constructor based on producer/consumer/broker configs and the indicated value
      * for whether or not client relogin is allowed before logout
-     * 
+     *
      * @param configs
      *            the mandatory (but possibly empty) producer/consumer/broker
      *            configs upon which to build this instance
@@ -65,7 +65,7 @@ public class ExpiringCredentialRefreshConfig {
      * Background login refresh thread will sleep until the specified window factor
      * relative to the credential's total lifetime has been reached, at which time
      * it will try to refresh the credential.
-     * 
+     *
      * @return the login refresh window factor
      */
     public double loginRefreshWindowFactor() {
@@ -75,7 +75,7 @@ public class ExpiringCredentialRefreshConfig {
     /**
      * Amount of random jitter added to the background login refresh thread's sleep
      * time.
-     * 
+     *
      * @return the login refresh window jitter
      */
     public double loginRefreshWindowJitter() {
@@ -85,7 +85,7 @@ public class ExpiringCredentialRefreshConfig {
     /**
      * The desired minimum time between checks by the background login refresh
      * thread, in seconds
-     * 
+     *
      * @return the desired minimum refresh period, in seconds
      */
     public short loginRefreshMinPeriodSeconds() {
@@ -97,7 +97,7 @@ public class ExpiringCredentialRefreshConfig {
      * refresh is scheduled to occur closer to expiration than the number of seconds
      * defined here then the refresh will be moved up to maintain as much of the
      * desired buffer as possible.
-     * 
+     *
      * @return the refresh buffer, in seconds
      */
     public short loginRefreshBufferSeconds() {
@@ -114,7 +114,7 @@ public class ExpiringCredentialRefreshConfig {
      * long as the original credential remains valid. Otherwise, if logout is
      * immediately invoked prior to relogin, a relogin failure leaves the client
      * without the ability to connect until relogin does in fact succeed.
-     * 
+     *
      * @return true if relogin is allowed prior to discarding an existing
      *         (presumably unexpired) credential, otherwise false
      */

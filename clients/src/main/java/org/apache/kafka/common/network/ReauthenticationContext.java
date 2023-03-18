@@ -29,7 +29,7 @@ public class ReauthenticationContext {
 
     /**
      * Constructor
-     * 
+     *
      * @param previousAuthenticator
      *            the mandatory {@link Authenticator} that was previously used to
      *            authenticate the channel
@@ -42,7 +42,7 @@ public class ReauthenticationContext {
      *            side this is mandatory and it must contain the
      *            {@code SaslHandshakeRequest} that has been received on the server
      *            and that initiates re-authentication.
-     * 
+     *
      * @param nowNanos
      *            the current time. The value is in nanoseconds as per
      *            {@code System.nanoTime()} and is therefore only useful when
@@ -63,7 +63,7 @@ public class ReauthenticationContext {
      * re-authentication. For the server side this is mandatory and it must contain
      * the {@code SaslHandshakeRequest} that has been received on the server and
      * that initiates re-authentication.
-     * 
+     *
      * @return the applicable {@link NetworkReceive} instance, if any
      */
     public NetworkReceive networkReceive() {
@@ -73,7 +73,7 @@ public class ReauthenticationContext {
     /**
      * Return the always non-null {@link Authenticator} that was previously used to
      * authenticate the channel
-     * 
+     *
      * @return the always non-null {@link Authenticator} that was previously used to
      *         authenticate the channel
      */
@@ -85,7 +85,7 @@ public class ReauthenticationContext {
      * Return the time when re-authentication began. The value is in nanoseconds as
      * per {@code System.nanoTime()} and is therefore only useful when compared to
      * such a value -- it's absolute value is meaningless.
-     * 
+     *
      * @return the time when re-authentication began
      */
     public long reauthenticationBeginNanos() {

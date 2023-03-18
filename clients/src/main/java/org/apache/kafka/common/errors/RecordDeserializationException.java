@@ -19,7 +19,7 @@ package org.apache.kafka.common.errors;
 import org.apache.kafka.common.TopicPartition;
 
 /**
- *  This exception is raised for any error that occurs while deserializing records received by the consumer using 
+ *  This exception is raised for any error that occurs while deserializing records received by the consumer using
  *  the configured {@link org.apache.kafka.common.serialization.Deserializer}.
  */
 public class RecordDeserializationException extends SerializationException {

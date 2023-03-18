@@ -45,7 +45,7 @@ public final class RemoteClusterUtils {
     private RemoteClusterUtils() {}
 
     /** Find shortest number of hops from an upstream cluster.
-     *  Returns -1 if the cluster is unreachable */ 
+     *  Returns -1 if the cluster is unreachable */
     public static int replicationHops(Map<String, Object> properties, String upstreamClusterAlias)
             throws InterruptedException, TimeoutException {
         try (MirrorClient client = new MirrorClient(properties)) {

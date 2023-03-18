@@ -146,7 +146,7 @@ public class KafkaStreamsTest {
     private Properties props;
     private MockAdminClient adminClient;
     private StateListenerStub streamsStateListener;
-    
+
     @Mock
     private StreamThread streamThreadOne;
     @Mock

@@ -115,7 +115,7 @@ class BatchAccumulatorTest {
 
             List<String> records = asList("a", "b", "c", "d", "e", "f", "g", "h", "i");
 
-            // Append records 
+            // Append records
             assertEquals(baseOffset, appender.call(acc, leaderEpoch, records.subList(0, 1)));
             assertEquals(baseOffset + 2, appender.call(acc, leaderEpoch, records.subList(1, 3)));
             assertEquals(baseOffset + 5, appender.call(acc, leaderEpoch, records.subList(3, 6)));
@@ -126,7 +126,7 @@ class BatchAccumulatorTest {
             acc.forceDrain();
             assertTrue(acc.needsDrain(time.milliseconds()));
             assertEquals(0, acc.timeUntilDrain(time.milliseconds()));
-           
+
             // Drain completed batches
             List<BatchAccumulator.CompletedBatch<String>> batches = acc.drain();
 
@@ -163,7 +163,7 @@ class BatchAccumulatorTest {
 
             List<String> records = asList("a", "b", "c", "d", "e", "f", "g", "h", "i");
 
-            // Append records 
+            // Append records
             assertEquals(baseOffset, appender.call(acc, leaderEpoch, records.subList(0, 1)));
             assertEquals(baseOffset + 2, appender.call(acc, leaderEpoch, records.subList(1, 3)));
             assertEquals(baseOffset + 5, appender.call(acc, leaderEpoch, records.subList(3, 6)));
@@ -171,7 +171,7 @@ class BatchAccumulatorTest {
             assertEquals(baseOffset + 8, appender.call(acc, leaderEpoch, records.subList(8, 9)));
 
             assertFalse(acc.needsDrain(time.milliseconds()));
-           
+
             // Append a leader change message
             acc.appendLeaderChangeMessage(new LeaderChangeMessage(), time.milliseconds());
 

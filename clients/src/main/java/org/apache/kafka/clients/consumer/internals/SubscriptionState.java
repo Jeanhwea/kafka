@@ -784,7 +784,7 @@ public class SubscriptionState {
         private Integer preferredReadReplica;
         private Long preferredReadReplicaExpireTimeMs;
         private boolean endOffsetRequested;
-        
+
         TopicPartitionState() {
             this.paused = false;
             this.pendingRevocation = false;

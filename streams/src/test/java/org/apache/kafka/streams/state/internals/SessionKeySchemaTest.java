@@ -202,7 +202,7 @@ public class SessionKeySchemaTest {
         final List<Integer> results = getValues(hasNextCondition);
         assertThat(results, equalTo(asList(1, 2, 3, 4, 5, 6)));
     }
-    
+
     @Test
     public void testUpperBoundWithLargeTimestamps() {
         final Bytes upper = keySchema.upperRange(Bytes.wrap(new byte[]{0xA, 0xB, 0xC}), Long.MAX_VALUE);

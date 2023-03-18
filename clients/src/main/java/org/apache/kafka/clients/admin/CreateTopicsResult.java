@@ -81,7 +81,7 @@ public class CreateTopicsResult {
     public KafkaFuture<Uuid> topicId(String topic) {
         return futures.get(topic).thenApply(TopicMetadataAndConfig::topicId);
     }
-    
+
     /**
      * Returns a future that provides number of partitions in the topic when the request completes.
      * <p>
@@ -130,7 +130,7 @@ public class CreateTopicsResult {
             this.replicationFactor = UNKNOWN;
             this.config = null;
         }
-        
+
         public Uuid topicId() {
             ensureSuccess();
             return topicId;

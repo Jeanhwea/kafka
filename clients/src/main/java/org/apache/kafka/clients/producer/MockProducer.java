@@ -287,7 +287,7 @@ public class MockProducer<K, V> implements Producer<K, V> {
 
     /**
      * Adds the record to the list of sent records. The {@link RecordMetadata} returned will be immediately satisfied.
-     * 
+     *
      * @see #history()
      */
     @Override
@@ -321,7 +321,7 @@ public class MockProducer<K, V> implements Producer<K, V> {
             keySerializer.serialize(record.topic(), record.key());
             valueSerializer.serialize(record.topic(), record.value());
         }
-            
+
         TopicPartition topicPartition = new TopicPartition(record.topic(), partition);
         ProduceRequestResult result = new ProduceRequestResult(topicPartition);
         FutureRecordMetadata future = new FutureRecordMetadata(result, 0, RecordBatch.NO_TIMESTAMP,

@@ -42,7 +42,7 @@ public class ConsumerRecords<K, V> implements Iterable<ConsumerRecord<K, V>> {
 
     /**
      * Get just the records for the given partition
-     * 
+     *
      * @param partition The partition to get records for
      */
     public List<ConsumerRecord<K, V>> records(TopicPartition partition) {

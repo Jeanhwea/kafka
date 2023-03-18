@@ -70,7 +70,7 @@ public class StickyPartitionCacheTest {
         int changedPartB = stickyPartitionCache.nextPartition(TOPIC_B, testCluster, partB);
         assertEquals(changedPartB, stickyPartitionCache.partition(TOPIC_B, testCluster));
     }
-    
+
     @Test
     public void unavailablePartitionsTest() {
         // Partition 1 in topic A and partition 0 in topic B are unavailable partitions.
@@ -81,11 +81,11 @@ public class StickyPartitionCacheTest {
             new PartitionInfo(TOPIC_B, 1, NODES[0], NODES, NODES),
             new PartitionInfo(TOPIC_C, 0, null, NODES, NODES)
         );
-        
+
         Cluster testCluster = new Cluster("clusterId", asList(NODES[0], NODES[1], NODES[2]), allPartitions,
             Collections.emptySet(), Collections.emptySet());
         StickyPartitionCache stickyPartitionCache = new StickyPartitionCache();
-        
+
         // Assure we never choose partition 1 because it is unavailable.
         int partA = stickyPartitionCache.partition(TOPIC_A, testCluster);
         assertNotEquals(1, partA);
@@ -93,7 +93,7 @@ public class StickyPartitionCacheTest {
             partA = stickyPartitionCache.nextPartition(TOPIC_A, testCluster, partA);
             assertNotEquals(1, stickyPartitionCache.partition(TOPIC_A, testCluster));
         }
-        
+
         // Assure we always choose partition 1 for topic B.
         int partB = stickyPartitionCache.partition(TOPIC_B, testCluster);
         assertEquals(1, partB);
@@ -101,7 +101,7 @@ public class StickyPartitionCacheTest {
             partB = stickyPartitionCache.nextPartition(TOPIC_B, testCluster, partB);
             assertEquals(1, stickyPartitionCache.partition(TOPIC_B, testCluster));
         }
-        
+
         // Assure that we still choose the partition when there are no partitions available.
         int partC = stickyPartitionCache.partition(TOPIC_C, testCluster);
         assertEquals(0, partC);

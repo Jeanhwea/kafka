@@ -27,7 +27,7 @@ import java.util.regex.Pattern;
 
 /** Uses an include and exclude pattern. */
 public class DefaultTopicFilter implements TopicFilter {
-    
+
     public static final String TOPICS_INCLUDE_CONFIG = "topics";
     private static final String TOPICS_INCLUDE_DOC = "List of topics and/or regexes to replicate.";
     public static final String TOPICS_INCLUDE_DEFAULT = ".*";

@@ -135,7 +135,7 @@ public class TopologyMetadata {
     public void setLog(final LogContext logContext) {
         log = logContext.logger(getClass());
     }
-    
+
     public ProcessingMode processingMode() {
         return processingMode;
     }

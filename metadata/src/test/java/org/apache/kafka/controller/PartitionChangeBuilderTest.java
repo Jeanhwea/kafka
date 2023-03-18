@@ -400,7 +400,7 @@ public class PartitionChangeBuilderTest {
             brokerId -> brokerId == leaderId,
             isLeaderRecoverySupported
         ).setElection(Election.UNCLEAN);
-        
+
 
         // The partition should stay as recovering
         PartitionChangeRecord changeRecord = (PartitionChangeRecord) onlineBuilder

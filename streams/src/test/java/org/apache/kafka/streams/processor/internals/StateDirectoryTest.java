@@ -131,7 +131,7 @@ public class StateDirectoryTest {
         assertPermissions(stateDir);
         assertPermissions(appDir);
     }
-    
+
     private void assertPermissions(final File file) {
         final Path path = file.toPath();
         if (path.getFileSystem().supportedFileAttributeViews().contains("posix")) {

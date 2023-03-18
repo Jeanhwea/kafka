@@ -1808,7 +1808,7 @@ public class KStreamKStreamJoinTest {
             "      <-- second-join-this-join, second-join-other-join\n" +
             "    Sink: KSTREAM-SINK-0000000021 (topic: out-two)\n" +
             "      <-- second-join-merge\n\n";
-    
+
     private final String expectedTopologyWithGeneratedRepartitionTopic = "Topologies:\n" +
             "   Sub-topology: 0\n" +
             "    Source: KSTREAM-SOURCE-0000000000 (topics: [topic])\n" +

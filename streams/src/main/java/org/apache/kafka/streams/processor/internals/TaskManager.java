@@ -327,7 +327,7 @@ public class TaskManager {
         tasks.clearPendingTasksToCreate();
         tasks.addPendingActiveTasksToCreate(pendingTasksToCreate(activeTasksToCreate));
         tasks.addPendingStandbyTasksToCreate(pendingTasksToCreate(standbyTasksToCreate));
-        
+
         // first rectify all existing tasks:
         // 1. for tasks that are already owned, just update input partitions / resume and skip re-creating them
         // 2. for tasks that have changed active/standby status, just recycle and skip re-creating them

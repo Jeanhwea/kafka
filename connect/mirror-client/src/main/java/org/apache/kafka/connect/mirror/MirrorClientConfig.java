@@ -100,7 +100,7 @@ public class MirrorClientConfig extends AbstractConfig {
     public Map<String, Object> producerConfig() {
         return clientConfig(PRODUCER_CLIENT_PREFIX);
     }
-    
+
     private Map<String, Object> clientConfig(String prefix) {
         Map<String, Object> props = new HashMap<>();
         props.putAll(valuesWithPrefixOverride(prefix));
@@ -125,13 +125,13 @@ public class MirrorClientConfig extends AbstractConfig {
             CommonClientConfigs.SECURITY_PROTOCOL_DOC)
         .withClientSslSupport()
         .withClientSaslSupport();
- 
+
     static final ConfigDef CONFIG_DEF = new ConfigDef()
         .define(CommonClientConfigs.BOOTSTRAP_SERVERS_CONFIG,
             Type.STRING,
             null,
             Importance.HIGH,
-            CommonClientConfigs.BOOTSTRAP_SERVERS_DOC) 
+            CommonClientConfigs.BOOTSTRAP_SERVERS_DOC)
         .define(
             REPLICATION_POLICY_CLASS,
             ConfigDef.Type.CLASS,

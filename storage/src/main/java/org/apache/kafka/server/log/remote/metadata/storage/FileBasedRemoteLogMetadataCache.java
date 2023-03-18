@@ -97,7 +97,7 @@ public class FileBasedRemoteLogMetadataCache extends RemoteLogMetadataCache {
             for (RemoteLogSegmentId id : state.unreferencedSegmentIds()) {
                 snapshots.add(RemoteLogSegmentMetadataSnapshot.create(idToSegmentMetadata.get(id)));
             }
-            
+
             // Add referenced segments.
             for (RemoteLogSegmentId id : state.referencedSegmentIds()) {
                 snapshots.add(RemoteLogSegmentMetadataSnapshot.create(idToSegmentMetadata.get(id)));

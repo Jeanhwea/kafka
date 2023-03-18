@@ -32,9 +32,9 @@ public class TestUtils {
         }
         return props;
     }
-    
+
     /*
-     * return records with different but predictable key and value 
+     * return records with different but predictable key and value
      */
     public static Map<String, String> generateRecords(int numRecords) {
         Map<String, String> records = new HashMap<>();

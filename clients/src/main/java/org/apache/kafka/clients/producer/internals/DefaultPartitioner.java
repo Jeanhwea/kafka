@@ -30,7 +30,7 @@ import java.util.Map;
  * <li>If a partition is specified in the record, use it
  * <li>If no partition is specified but a key is present choose a partition based on a hash of the key
  * <li>If no partition or key is present choose the sticky partition that changes when the batch is full.
- * 
+ *
  * See KIP-480 for details about sticky partitioning.
  */
 @Deprecated
@@ -74,9 +74,9 @@ public class DefaultPartitioner implements Partitioner {
     }
 
     public void close() {}
-    
+
     /**
-     * If a batch completed for the current sticky partition, change the sticky partition. 
+     * If a batch completed for the current sticky partition, change the sticky partition.
      * Alternately, if no sticky partition has been determined, set one.
      */
     @SuppressWarnings("deprecation")

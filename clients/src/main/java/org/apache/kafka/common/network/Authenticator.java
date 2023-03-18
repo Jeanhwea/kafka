@@ -71,7 +71,7 @@ public interface Authenticator extends Closeable {
      * and collected for later processing as required. There must not be partially
      * written requests; any request queued for writing (for which zero bytes have
      * been written) remains queued until after re-authentication succeeds.
-     * 
+     *
      * @param reauthenticationContext
      *            the context in which this re-authentication is occurring. This
      *            instance is responsible for closing the previous Authenticator
@@ -96,7 +96,7 @@ public interface Authenticator extends Closeable {
      * if it receives a request unrelated to authentication. We store nanoseconds
      * here to avoid having to invoke the more expensive {@code milliseconds()} call
      * on the broker for every request
-     * 
+     *
      * @return the session expiration time, if any, otherwise null
      */
     default Long serverSessionExpirationTimeNanos() {
@@ -112,7 +112,7 @@ public interface Authenticator extends Closeable {
      * full session lifetime to account for latency between client and server and to
      * avoid re-authentication storms that could be caused by many sessions
      * re-authenticating simultaneously.
-     * 
+     *
      * @return the time on or after which a client should re-authenticate this
      *         session, if any, otherwise null
      */
@@ -126,7 +126,7 @@ public interface Authenticator extends Closeable {
      * The server-side perspective will yield a lower value than the client-side
      * perspective of the same re-authentication because the client-side observes an
      * additional network round-trip.
-     * 
+     *
      * @return the number of milliseconds that elapsed while re-authenticating this
      *         session from the perspective of this instance, if applicable,
      *         otherwise null
@@ -144,7 +144,7 @@ public interface Authenticator extends Closeable {
      * re-authentication process. The response returned is removed from the authenticator's
      * queue. Responses of requests sent after completion of re-authentication are
      * processed only when the authenticator response queue is empty.
-     * 
+     *
      * @return the (always non-null but possibly empty) client-side
      *         {@link NetworkReceive} response that arrived during
      *         re-authentication that is unrelated to re-authentication, if any
@@ -152,11 +152,11 @@ public interface Authenticator extends Closeable {
     default Optional<NetworkReceive> pollResponseReceivedDuringReauthentication() {
         return Optional.empty();
     }
-    
+
     /**
      * Return true if this is a server-side authenticator and the connected client
      * has indicated that it supports re-authentication, otherwise false
-     * 
+     *
      * @return true if this is a server-side authenticator and the connected client
      *         has indicated that it supports re-authentication, otherwise false
      */

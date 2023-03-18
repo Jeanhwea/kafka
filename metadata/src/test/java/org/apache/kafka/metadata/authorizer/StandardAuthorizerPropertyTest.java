@@ -267,7 +267,7 @@ public class StandardAuthorizerPropertyTest {
             pattern -> !pattern.isEmpty()
         );
     }
-    
+
     private void addRandomPrefixRules(
         StandardAuthorizer authorizer,
         String topic,
@@ -293,7 +293,7 @@ public class StandardAuthorizerPropertyTest {
                 PatternType.PREFIXED,
                 permissionType
             ));
-        }        
+        }
     }
 
 }

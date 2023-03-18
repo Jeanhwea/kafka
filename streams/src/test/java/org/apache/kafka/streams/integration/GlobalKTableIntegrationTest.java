@@ -348,7 +348,7 @@ public class GlobalKTableIntegrationTest {
         CLUSTER.createTopics(streamTopic);
         CLUSTER.createTopic(globalTableTopic, 2, 1);
     }
-    
+
     private void startStreams() {
         kafkaStreams = new KafkaStreams(builder.build(), streamsConfiguration);
         kafkaStreams.start();

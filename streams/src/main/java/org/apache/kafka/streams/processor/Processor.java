@@ -36,7 +36,7 @@ public interface Processor<K, V> {
      * The provided {@link ProcessorContext context} can be used to access topology and record meta data, to
      * {@link ProcessorContext#schedule(Duration, PunctuationType, Punctuator) schedule} a method to be
      * {@link Punctuator#punctuate(long) called periodically} and to access attached {@link StateStore}s.
-     * 
+     *
      * @param context the context; may not be null
      */
     void init(ProcessorContext context);

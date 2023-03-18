@@ -39,7 +39,7 @@ package org.apache.kafka.streams.kstream;
  * @see KStream#join(KTable, ValueJoinerWithKey, Joined)
  * @see KStream#leftJoin(KTable, ValueJoinerWithKey)
  * @see KStream#leftJoin(KTable, ValueJoinerWithKey, Joined)
- * @see KStream#join(GlobalKTable, KeyValueMapper, ValueJoinerWithKey) 
+ * @see KStream#join(GlobalKTable, KeyValueMapper, ValueJoinerWithKey)
  * @see KStream#join(GlobalKTable, KeyValueMapper, ValueJoinerWithKey, Named)
  * @see KStream#leftJoin(GlobalKTable, KeyValueMapper, ValueJoinerWithKey)
  * @see KStream#leftJoin(GlobalKTable, KeyValueMapper, ValueJoinerWithKey, Named)

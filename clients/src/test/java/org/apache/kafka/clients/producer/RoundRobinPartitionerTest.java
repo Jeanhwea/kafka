@@ -94,7 +94,7 @@ public class RoundRobinPartitionerTest {
         assertEquals(10, partitionCount.get(1).intValue());
         assertEquals(10, partitionCount.get(2).intValue());
     }
-    
+
     @Test
     public void testRoundRobinWithNullKeyBytes() throws InterruptedException {
         final String topicA = "topicA";
@@ -124,5 +124,5 @@ public class RoundRobinPartitionerTest {
         assertEquals(10, partitionCount.get(0).intValue());
         assertEquals(10, partitionCount.get(1).intValue());
         assertEquals(10, partitionCount.get(2).intValue());
-    }    
+    }
 }

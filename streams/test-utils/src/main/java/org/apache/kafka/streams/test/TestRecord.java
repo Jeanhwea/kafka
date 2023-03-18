@@ -55,7 +55,7 @@ public class TestRecord<K, V> {
 
     /**
      * Creates a record.
-     * 
+     *
      * @param key The key that will be included in the record
      * @param value The value of the record
      * @param headers the record headers that will be included in the record
@@ -100,7 +100,7 @@ public class TestRecord<K, V> {
         this.headers = new RecordHeaders(headers);
         this.recordTime = null;
     }
-    
+
     /**
      * Creates a record.
      *

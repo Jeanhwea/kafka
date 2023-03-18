@@ -36,7 +36,7 @@ import static org.apache.kafka.streams.processor.internals.metrics.StreamsMetric
  * @param <V>
  */
 public class MeteredTimestampedKeyValueStore<K, V>
-    extends MeteredKeyValueStore<K, ValueAndTimestamp<V>> 
+    extends MeteredKeyValueStore<K, ValueAndTimestamp<V>>
     implements TimestampedKeyValueStore<K, V> {
 
     MeteredTimestampedKeyValueStore(final KeyValueStore<Bytes, byte[]> inner,
@@ -61,7 +61,7 @@ public class MeteredTimestampedKeyValueStore<K, V>
 
     public RawAndDeserializedValue<V> getWithBinary(final K key) {
         try {
-            return maybeMeasureLatency(() -> { 
+            return maybeMeasureLatency(() -> {
                 final byte[] serializedValue = wrapped().get(keyBytes(key));
                 return new RawAndDeserializedValue<>(serializedValue, outerValue(serializedValue));
             }, time, getSensor);

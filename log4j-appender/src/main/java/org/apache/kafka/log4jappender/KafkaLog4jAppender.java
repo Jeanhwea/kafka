@@ -84,7 +84,7 @@ public class KafkaLog4jAppender extends AppenderSkeleton {
     private boolean ignoreExceptions = true;
     private boolean syncSend;
     private Producer<byte[], byte[]> producer;
-    
+
     public Producer<byte[], byte[]> getProducer() {
         return producer;
     }

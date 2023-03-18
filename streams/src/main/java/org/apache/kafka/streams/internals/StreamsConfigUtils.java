@@ -40,7 +40,7 @@ public class StreamsConfigUtils {
             this.name = name;
         }
     }
-    
+
     @SuppressWarnings("deprecation")
     public static ProcessingMode processingMode(final StreamsConfig config) {
         if (StreamsConfig.EXACTLY_ONCE.equals(config.getString(StreamsConfig.PROCESSING_GUARANTEE_CONFIG))) {

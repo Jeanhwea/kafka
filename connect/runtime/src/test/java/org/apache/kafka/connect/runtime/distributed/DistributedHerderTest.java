@@ -2304,7 +2304,7 @@ public class DistributedHerderTest {
         time.sleep(2000L);
         assertStatistics("leaderUrl", false, 3, 1, 100, 2000L);
 
-        // tick once more to ensure that the successful read to the end of the config topic was 
+        // tick once more to ensure that the successful read to the end of the config topic was
         // tracked and no further unnecessary attempts were made
         herder.tick();
 
@@ -3160,7 +3160,7 @@ public class DistributedHerderTest {
 
         // The future returned by Worker::fenceZombies
         KafkaFuture<Void> workerFencingFuture = EasyMock.mock(KafkaFuture.class);
-        // The future tracked by the herder (which tracks the fencing performed by the worker and the possible followup write to the config topic) 
+        // The future tracked by the herder (which tracks the fencing performed by the worker and the possible followup write to the config topic)
         KafkaFuture<Void> herderFencingFuture = EasyMock.mock(KafkaFuture.class);
 
         // Immediately invoke callbacks that the herder sets up for when the worker fencing and writes to the config topic have completed
@@ -3281,7 +3281,7 @@ public class DistributedHerderTest {
 
         // The future returned by Worker::fenceZombies
         KafkaFuture<Void> workerFencingFuture = EasyMock.mock(KafkaFuture.class);
-        // The future tracked by the herder (which tracks the fencing performed by the worker and the possible followup write to the config topic) 
+        // The future tracked by the herder (which tracks the fencing performed by the worker and the possible followup write to the config topic)
         KafkaFuture<Void> herderFencingFuture = EasyMock.mock(KafkaFuture.class);
         // The callbacks that the herder has accrued for outstanding fencing futures
         Capture<KafkaFuture.BiConsumer<Void, Throwable>> herderFencingCallbacks = EasyMock.newCapture(CaptureType.ALL);
@@ -3384,7 +3384,7 @@ public class DistributedHerderTest {
         tasksPerConnector.forEach((connector, numStackedRequests) -> {
             // The future returned by Worker::fenceZombies
             KafkaFuture<Void> workerFencingFuture = EasyMock.mock(KafkaFuture.class);
-            // The future tracked by the herder (which tracks the fencing performed by the worker and the possible followup write to the config topic) 
+            // The future tracked by the herder (which tracks the fencing performed by the worker and the possible followup write to the config topic)
             KafkaFuture<Void> herderFencingFuture = EasyMock.mock(KafkaFuture.class);
 
             Capture<KafkaFuture.BiConsumer<Void, Throwable>> herderFencingCallback = EasyMock.newCapture(CaptureType.ALL);

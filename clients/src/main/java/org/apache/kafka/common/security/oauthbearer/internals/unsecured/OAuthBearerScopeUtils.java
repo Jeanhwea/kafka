@@ -34,7 +34,7 @@ public class OAuthBearerScopeUtils {
      * Return true if the given value meets the definition of a valid scope item as
      * per <a href="https://tools.ietf.org/html/rfc6749#section-3.3">RFC 6749
      * Section 3.3</a>, otherwise false
-     * 
+     *
      * @param scopeItem
      *            the mandatory scope item to check for validity
      * @return true if the given value meets the definition of a valid scope item,
@@ -48,7 +48,7 @@ public class OAuthBearerScopeUtils {
      * Convert a space-delimited list of scope values (for example,
      * <code>"scope1 scope2"</code>) to a List containing the individual elements
      * (<code>"scope1"</code> and <code>"scope2"</code>)
-     * 
+     *
      * @param spaceDelimitedScope
      *            the mandatory (but possibly empty) space-delimited scope values,
      *            each of which must be valid according to

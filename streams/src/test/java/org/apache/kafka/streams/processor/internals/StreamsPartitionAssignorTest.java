@@ -733,7 +733,7 @@ public class StreamsPartitionAssignorTest {
         final Set<TaskId> prevTasks10 = mkSet(TASK_0_0);
         final Set<TaskId> prevTasks11 = mkSet(TASK_0_1);
         final Set<TaskId> prevTasks20 = mkSet(TASK_0_2);
-        
+
         createMockTaskManager(prevTasks10, EMPTY_TASKS);
         configureDefaultPartitionAssignor();
 

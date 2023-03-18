@@ -37,7 +37,7 @@ public interface RocksDBConfigSetter {
 
     /**
      * Set the rocks db options for the provided storeName.
-     * 
+     *
      * @param storeName     the name of the store being configured
      * @param options       the RocksDB options
      * @param configs       the configuration supplied to {@link org.apache.kafka.streams.StreamsConfig}

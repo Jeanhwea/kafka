@@ -30,7 +30,7 @@ public class OAuthBearerValidationResult implements Serializable {
 
     /**
      * Return an instance indicating success
-     * 
+     *
      * @return an instance indicating success
      */
     public static OAuthBearerValidationResult newSuccess() {
@@ -39,7 +39,7 @@ public class OAuthBearerValidationResult implements Serializable {
 
     /**
      * Return a new validation failure instance
-     * 
+     *
      * @param failureDescription
      *            optional description of the failure
      * @return a new validation failure instance
@@ -50,7 +50,7 @@ public class OAuthBearerValidationResult implements Serializable {
 
     /**
      * Return a new validation failure instance
-     * 
+     *
      * @param failureDescription
      *            optional description of the failure
      * @param failureScope
@@ -77,7 +77,7 @@ public class OAuthBearerValidationResult implements Serializable {
 
     /**
      * Return true if this instance indicates success, otherwise false
-     * 
+     *
      * @return true if this instance indicates success, otherwise false
      */
     public boolean success() {
@@ -86,7 +86,7 @@ public class OAuthBearerValidationResult implements Serializable {
 
     /**
      * Return the (potentially null) descriptive message for the failure
-     * 
+     *
      * @return the (potentially null) descriptive message for the failure
      */
     public String failureDescription() {
@@ -95,7 +95,7 @@ public class OAuthBearerValidationResult implements Serializable {
 
     /**
      * Return the (potentially null) scope to be reported with the failure
-     * 
+     *
      * @return the (potentially null) scope to be reported with the failure
      */
     public String failureScope() {
@@ -105,7 +105,7 @@ public class OAuthBearerValidationResult implements Serializable {
     /**
      * Return the (potentially null) OpenID Connect configuration to be reported
      * with the failure
-     * 
+     *
      * @return the (potentially null) OpenID Connect configuration to be reported
      *         with the failure
      */
@@ -115,7 +115,7 @@ public class OAuthBearerValidationResult implements Serializable {
 
     /**
      * Raise an exception if this instance indicates failure, otherwise do nothing
-     * 
+     *
      * @throws OAuthBearerIllegalTokenException
      *             if this instance indicates failure
      */

@@ -51,7 +51,7 @@ public class ProducerPerformance {
         ProducerPerformance perf = new ProducerPerformance();
         perf.start(args);
     }
-    
+
     void start(String[] args) throws IOException {
         ArgumentParser parser = argParser();
 
@@ -176,7 +176,7 @@ public class ProducerPerformance {
         }
         return payload;
     }
-    
+
     static Properties readProps(List<String> producerProps, String producerConfig, String transactionalId,
             boolean transactionsEnabled) throws IOException {
         Properties props = new Properties();

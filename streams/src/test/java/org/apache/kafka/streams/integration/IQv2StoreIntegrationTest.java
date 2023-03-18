@@ -1080,7 +1080,7 @@ public class IQv2StoreIntegrationTest {
         assertThat(integer, is(expectedValue));
         assertThat(queryResult.getExecutionInfo(), is(empty()));
         assertThat(queryResult.getPosition(), is(POSITION_0));
-    }   
+    }
 
     public <V> void shouldHandleRangeQuery(
         final Optional<Integer> lower,

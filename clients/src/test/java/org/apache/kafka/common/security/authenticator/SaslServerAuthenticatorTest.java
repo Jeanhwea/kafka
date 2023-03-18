@@ -86,7 +86,7 @@ import static org.mockito.Mockito.when;
 public class SaslServerAuthenticatorTest {
 
     private final String clientId = "clientId";
-    
+
     @Test
     public void testOversizeRequest() throws IOException {
         TransportLayer transportLayer = mock(TransportLayer.class);

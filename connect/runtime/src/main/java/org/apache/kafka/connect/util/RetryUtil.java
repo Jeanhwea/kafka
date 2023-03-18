@@ -40,7 +40,7 @@ public class RetryUtil {
      * be used for logging.  For example, "list offsets". If the supplier is null or the supplied string is
      * null, {@code callable} will be used as the default string.
      *
-     * <p>The task will be executed at least once. No retries will be performed 
+     * <p>The task will be executed at least once. No retries will be performed
      * if {@code timeoutDuration} is 0 or negative, or if {@code timeoutDuration} is less than {@code retryBackoffMs}.
      *
      * <p>A {@code retryBackoffMs} that is negative or zero will result in no delays between retries.

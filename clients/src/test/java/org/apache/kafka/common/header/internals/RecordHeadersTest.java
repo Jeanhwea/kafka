@@ -72,7 +72,7 @@ public class RecordHeadersTest {
         assertEquals(1, getCount(headers));
 
         headers.add(new RecordHeader("key3", "value3".getBytes()));
-        
+
         assertNull(headers.lastHeader("key"));
 
         assertHeader("key2", "value2", headers.lastHeader("key2"));
@@ -137,14 +137,14 @@ public class RecordHeadersTest {
             headers.add(new RecordHeader("key", "value".getBytes()));
             fail("IllegalStateException expected as headers are closed");
         } catch (IllegalStateException ise) {
-            //expected  
+            //expected
         }
 
         try {
             headers.remove("key");
             fail("IllegalStateException expected as headers are closed");
         } catch (IllegalStateException ise) {
-            //expected  
+            //expected
         }
 
         try {
@@ -153,15 +153,15 @@ public class RecordHeadersTest {
             headerIterator.remove();
             fail("IllegalStateException expected as headers are closed");
         } catch (IllegalStateException ise) {
-            //expected  
+            //expected
         }
-        
+
         try {
             headerIteratorBeforeClose.next();
             headerIteratorBeforeClose.remove();
             fail("IllegalStateException expected as headers are closed");
         } catch (IllegalStateException ise) {
-            //expected  
+            //expected
         }
     }
 
@@ -227,7 +227,7 @@ public class RecordHeadersTest {
         }
         return count;
     }
-    
+
     static void assertHeader(String key, String value, Header actual) {
         assertEquals(key, actual.key());
         assertTrue(Arrays.equals(value.getBytes(), actual.value()));

@@ -156,7 +156,7 @@ public class MemoryRecords extends AbstractRecords {
 
     /**
      * Note: This method is also used to convert the first timestamp of the batch (which is usually the timestamp of the first record)
-     * to the delete horizon of the tombstones or txn markers which are present in the batch. 
+     * to the delete horizon of the tombstones or txn markers which are present in the batch.
      */
     private static FilterResult filterTo(TopicPartition partition, Iterable<MutableRecordBatch> batches,
                                          RecordFilter filter, ByteBuffer destinationBuffer, int maxRecordBatchSize,

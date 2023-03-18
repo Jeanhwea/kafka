@@ -1732,7 +1732,7 @@ public class RocksDBGenericOptionsToDbOptionsColumnFamilyOptionsAdapter extends 
     //
     // BEGIN options for blobs (integrated BlobDB)
     //
-    
+
     @Override
     public Options setEnableBlobFiles(final boolean enableBlobFiles) {
         columnFamilyOptions.setEnableBlobFiles(enableBlobFiles);

@@ -25,9 +25,9 @@ import org.apache.kafka.common.MetricNameTemplate;
 import org.apache.kafka.common.metrics.Metrics;
 
 public class ConsumerMetrics {
-    
+
     public FetcherMetricsRegistry fetcherMetrics;
-    
+
     public ConsumerMetrics(Set<String> metricsTags, String metricGrpPrefix) {
         this.fetcherMetrics = new FetcherMetricsRegistry(metricsTags, metricGrpPrefix);
     }

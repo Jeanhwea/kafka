@@ -205,7 +205,7 @@ class WorkerSinkTask extends WorkerTask {
             while (!isStopping())
                 iteration();
         } catch (WakeupException e) {
-            log.trace("Consumer woken up during initial offset commit attempt, " 
+            log.trace("Consumer woken up during initial offset commit attempt, "
                 + "but succeeded during a later attempt");
         }
     }

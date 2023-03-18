@@ -98,7 +98,7 @@ public class PartitionGrouperTest {
     public void shouldNotCreateAnyTasksBecauseOneTopicHasUnknownPartitions() {
         final PartitionGrouper grouper = new PartitionGrouper();
         final Map<Subtopology, Set<String>> topicGroups = new HashMap<>();
-    
+
         topicGroups.put(SUBTOPOLOGY_0, mkSet("topic1", "unknownTopic", "topic2"));
         assertThrows(RuntimeException.class, () -> grouper.partitionGroups(topicGroups, metadata));
     }

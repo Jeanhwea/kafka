@@ -38,7 +38,7 @@ public interface ReplicationPolicy {
      *
      *  Returns null if not a remote topic.
      */
-    String upstreamTopic(String topic); 
+    String upstreamTopic(String topic);
 
     /** The name of the original source-topic, which may have been replicated multiple hops.
      *  Returns the topic if it is not a remote topic.

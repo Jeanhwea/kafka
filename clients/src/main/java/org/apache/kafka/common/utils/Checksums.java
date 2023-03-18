@@ -99,7 +99,7 @@ public final class Checksums {
         }
         throw new IllegalStateException(t);
     }
-    
+
     public static void updateInt(Checksum checksum, int input) {
         checksum.update((byte) (input >> 24));
         checksum.update((byte) (input >> 16));

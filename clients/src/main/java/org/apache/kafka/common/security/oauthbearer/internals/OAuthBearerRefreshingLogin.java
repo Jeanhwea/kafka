@@ -68,7 +68,7 @@ import org.slf4j.LoggerFactory;
  * <td>{@code sasl.login.refresh.min.buffer.seconds}</td>
  * </tr>
  * </table>
- * 
+ *
  * @see OAuthBearerLoginModule
  * @see SaslConfigs#SASL_LOGIN_REFRESH_WINDOW_FACTOR_DOC
  * @see SaslConfigs#SASL_LOGIN_REFRESH_WINDOW_JITTER_DOC
